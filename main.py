@@ -1,6 +1,6 @@
-from convert import convert
-from render import render
-from to_ascii import to_ascii
+from ascii_video.convert import convert
+from ascii_video.render import render
+from ascii_video.to_ascii import to_ascii
 import os
 import sys
 
