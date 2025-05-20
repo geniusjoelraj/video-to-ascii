@@ -5,7 +5,7 @@ import os
 import sys
 
 video=sys.argv[1]
-name=sys.argv[2]
+name=video[:video.rfind('.')]
 dir="frames/"+name
 ascii_dir="frames_ascii/"+name+"_ascii"
 quality=100
