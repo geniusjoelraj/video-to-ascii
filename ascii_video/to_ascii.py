@@ -1,4 +1,5 @@
 from PIL import Image, ImageOps
+from ascii_video import colors
 
 def resize_img(img,quality):
     width, height=img.size
@@ -20,10 +21,11 @@ def to_ascii(image_path, quality=50, chars="鬱森冊花代日三二一丶 "[::-
                 intensity=im.getpixel((i,j))
                 assert isinstance(intensity, int)
                 index=intensity*(len(chars)-1)//255
+                color=colors.colors[min(index//(len(colors.colors)-2),len(colors.colors)-2)]
                 if chars[index]==" ":
                     arr.append(" ")
-                arr.append(chars[index]+"")
-            arr.append("\n")
+                arr.append(color+chars[index])
+            arr.append(colors.end+"\n")
         image="".join(arr)
     # print(image)
     return image
