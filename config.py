@@ -8,4 +8,5 @@ quality = 170
 speed = 0.66
 recache = False
 recache_ascii = False
+colored=True
 

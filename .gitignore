@@ -6,3 +6,6 @@ include/
 lib64
 pyvenv.cfg
 lib/
+frames_ascii/
+frames/
+videos/
