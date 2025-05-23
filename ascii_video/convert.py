@@ -27,7 +27,7 @@ def convert(video,dir):
 
 def get_fps(video):
     cam = cv2.VideoCapture(video)
-    fps = cam.get(cv2.CAP_PROP_FPS)
+    fps = cam.get(cv2.CAP_PROP_FPS) or 1
     return fps
 
 if __name__=="__main__":
