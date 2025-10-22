@@ -4,9 +4,11 @@ ascii_inverse=ascii[::-1]
 kanji_inverse=kanji[::-1]
 chars=kanji_inverse
 
-quality = 170
+quality = 100
 speed = 0.66
-recache = False
-recache_ascii = False
-colored=True
+recache = True
+recache_ascii = True
+colored = True
+loop = True
 
+# THe command format `python main.py <name of video file(mus tbe inside the video folder)>

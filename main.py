@@ -51,5 +51,7 @@ if recache_ascii or not cached:
             file.write(img)
 try:
     render(ascii_dir, n, speed)
+    while config.loop:
+        render(ascii_dir, n, speed)
 except KeyboardInterrupt:
     print("Stopped")
