@@ -19,7 +19,6 @@ lib/
 include/
 pyvenv.cfg
 
-!frames/.gitkeep
-!frames_ascii/.gitkeep
-!videos/.gitkeep
-
+frames/*
+frames_ascii/*
+videos/*
