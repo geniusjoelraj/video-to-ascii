@@ -13,8 +13,9 @@ def to_ascii(image_path, quality=50, chars="鬱森冊花代日三二一丶 "[::-
     with Image.open(image_path) as im:
         im=im.rotate(90,expand=True)
         im=im.transpose(method=Image.Transpose.FLIP_TOP_BOTTOM)
-        im=ImageOps.grayscale(im)
         im=resize_img(im,quality)
+        color_im=im.copy()
+        im=ImageOps.grayscale(im)
         arr=[]
         w,h=im.size
         for i in range(w):
@@ -22,7 +23,8 @@ def to_ascii(image_path, quality=50, chars="鬱森冊花代日三二一丶 "[::-
                 intensity=im.getpixel((i,j))
                 assert isinstance(intensity, int)
                 index=intensity*(len(chars)-1)//255
-                color = colors.colors[min(index * len(colors.colors) // len(chars), len(colors.colors) - 1)]
+                # color = colors.colors[min(index * len(colors.colors) // len(chars), len(colors.colors) - 1)]
+                color = colors.rgb_to_ansi(color_im.getpixel((i,j)))
                 if chars[index]==" ":
                     arr.append(" ")
                 arr.append(color+chars[index])

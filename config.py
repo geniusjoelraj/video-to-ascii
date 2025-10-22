@@ -6,6 +6,7 @@ chars=kanji_inverse
 
 quality = 170
 speed = 0.66
-recache = False
-recache_ascii = False
+recache = True
+recache_ascii = True
+colored=True
 
