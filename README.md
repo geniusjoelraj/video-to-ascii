@@ -16,7 +16,7 @@ Convert videos or GIFs into ASCII art animations directly in your terminal.
 
 ```bash
 # 1. Clone the repository
-git clone --depth 1 https://github.com/your-username/video-to-ascii.git
+git clone --depth 1 https://github.com/geniusjoelraj/video-to-ascii.git
 cd video-to-ascii
 
 # 2. Install dependencies
