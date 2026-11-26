@@ -29,7 +29,7 @@ mkdir -p videos
 # Copy your video or GIF into the videos/ folder
 
 # 4. Run the converter
-uv run main.py videos/<your_video>
+python main.py videos/<your_video>
 ```
 ## Custom Kanji-to-ASCII Mapping
 
