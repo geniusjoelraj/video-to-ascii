@@ -20,7 +20,9 @@ git clone --depth 1 https://github.com/geniusjoelraj/video-to-ascii.git
 cd video-to-ascii
 
 # 2. Install dependencies
-uv add -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
 # 3. Prepare your video
 mkdir -p videos
